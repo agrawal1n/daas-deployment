@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clientdeployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: clientdeployment
+  template:
+    metadata:
+      labels:
+        component: clientdeployment
+    spec:
+      containers:
+      - name: clientdeployment
+        image: react-demoapp:1.0
+        imagePullPolicy: Never
+        resources:
+            
+        ports:
+        - containerPort: 3000

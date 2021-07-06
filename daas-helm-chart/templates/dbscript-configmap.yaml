@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: initdb-configmap
+data:
+  my_init_script.sql: |
+   CREATE TABLE roles (role_id SERIAL PRIMARY KEY,name varchar(255) DEFAULT NULL);
+   INSERT INTO roles VALUES (1,'admin'),(2,'engineer');
+
+   CREATE TABLE permission (permission_id SERIAL PRIMARY KEY,action varchar(255) DEFAULT NULL);
+   INSERT INTO permission VALUES (1,'create'),(2,'read'),(3,'update'),(4,'delete');

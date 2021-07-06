@@ -1,0 +1,12 @@
+{{- if .Values.postgresql.install }}
+kind: Secret
+apiVersion: v1
+metadata:
+  name: postgresql-init-sql
+  labels:
+    app: {{ template "daas.name" . }}
+    chart: {{ template "daas.chart" . }}
+    release: {{ .Release.Name }}
+data:
+  init.sql: Q1JFQVRFIFVTRVIgImRhYXMiIFdJVEggRU5DUllQVEVEIFBBU1NXT1JEICdkYWFzJzsKQ1JFQVRFIERBVEFCQVNFICJkYWFzLWRiIjsKR1JBTlQgQUxMIFBSSVZJTEVHRVMgT04gREFUQUJBU0UgImRhYXMtZGIiIFRPICJkYWFzIjsK
+{{- end }}
