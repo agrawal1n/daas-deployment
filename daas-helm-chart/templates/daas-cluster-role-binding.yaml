@@ -8,5 +8,5 @@ roleRef:
   name: daas-role
 subjects:
 - kind: ServiceAccount
-  name: daas
+  name: default
   namespace: {{.Release.Namespace}}

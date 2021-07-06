@@ -6,7 +6,7 @@ fullnameOverride: "daas"
 domainsuffix: test.daidemo.com
 dbuser: daas
 dbpass: daas
-sa: daas
+sa: default
 createClusterRole: true
 
 ## Ref: https://github.com/bitnami/charts/blob/master/bitnami/postgresql/README.md
